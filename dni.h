@@ -60,6 +60,11 @@ class dni_t{
         
     else return false;
 }
+      bool operator <=(dni_t dni){
+        if(dni.dni_ < dni_)
+            return true;
+        else return false;
+    }
 
     operator unsigned long () const{
     
