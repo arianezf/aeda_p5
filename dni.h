@@ -60,10 +60,16 @@ class dni_t{
         
     else return false;
 }
-      bool operator <=(dni_t dni){
-        if(dni.dni_ < dni_)
-            return true;
-        else return false;
+      bool operator <(dni_t& dni){
+        if(dni_ != dni.dni_)
+            return this->dni_ < dni.dni_;
+        else
+            if(letra_ > dni.letra_)
+                 return this->dni_ < dni.dni_;
+        
+        //return this->dni_ < dni.dni_;
+        
+       
     }
 
     operator unsigned long () const{
